@@ -33,7 +33,7 @@ export default class ExamplePage {
         component: components['ChartWithTable'],
         props: {
           chartComponent: exampleChart,
-          tableAdapter: function (data) {
+          tableAdapter: function (chart, filters, data) {
             let map = {
               'key': 'Transformed key',
               'key2': 'Transformed key 2'
@@ -45,7 +45,6 @@ export default class ExamplePage {
                 return acc
               }, {}))
             })
-            console.log(newData)
             return newData
           }
         }
