@@ -6,6 +6,7 @@
         <FilterGrid />
       </div>
     </div>
+    <br />
 
     <chartGrid />
   </div>

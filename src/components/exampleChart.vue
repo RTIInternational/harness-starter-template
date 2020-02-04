@@ -1,14 +1,9 @@
 <template>
-  <div class="card">
-    <h5 class="card-header">{{chart.item.title}}</h5>
-    <div class="card-body">
-      <pre>
-        <code>
-          {{getChartData(chart.key)}}
-        </code>
-    </pre>
-    </div>
-  </div>
+  <pre>
+    <code>
+      {{getChartData(chart.key)}}
+    </code>
+  </pre>
 </template>
 
 <script>
