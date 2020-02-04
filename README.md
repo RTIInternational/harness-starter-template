@@ -30,3 +30,7 @@ If you would like a dockerized version of this application, simply uncomment the
 If you would like to have the CI worker also start up the nginx container on sif, uncomment the `deploy` stage and the `deploy-server-sif` step and replace the `YOUR_REPOSITORY_NAME` with the name of your repository. Additionally, change the `PORT_TO_USE` in the port mapping on line 59 to the port you would like to serve on on sif.
 
 Note: if you would like a subdomain on sif (for example `http://yourapp.sif.rtp.rti.org)`, [read these instructions](https://stackoverflow.com/questions/23649444/redirect-subdomain-to-port-nginx-flask) on how to proxy-pass a port.
+
+
+## Development of datavue packages
+Use the `package-dev` branch to develop new packages. Run the `dev-setup.sh` script from project root to install.
