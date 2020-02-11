@@ -4,7 +4,21 @@ A starter template for a vue app using datavue. This repository was created with
 
 ## Instructions for setup
 
-Clone this repository, and copy the contents into your project. It would be a good idea to run `yarn upgrade`, based on the last time this repository was updated. Otherwise, installation should be as simple as running `yarn install` and `yarn serve` locally.
+Included is a clone script that will create a new folder adjacent to this one, set it to a git remote of your choosing, run `yarn install`, then push. The syntax for using this script is as follows:
+
+```
+bash clone.sh <desired directory name> <git remote>
+```
+
+For example, if I created a new project in gitlab named `new-repo`, I could do the following:
+```
+cd ~/ # navigate to my home directory
+git clone http://gitlab.rtp.rti.org/datavue/datavue-starter-template # clone this repo
+bash clone.sh new-repo git@gitlab.rtp.rti.org:cds/new-repo.git
+```
+This would create `~/new-repo` on your computer, copy the contents of `datavue-starter-template` into it, change the git remote to the specified remote, then push the project.f
+
+After running this script, you simply need to run `yarn install` to install dependencies, and you are good to go.
 
 ## CI and Deployment
 
