@@ -65,9 +65,8 @@ cleanup-app:
     - docker kill datavue-starter-template-ci
     - docker container rm -f datavue-starter-template-ci
     - docker image rm -f datavue-starter-template-ci
-
-cleanup-server:
-  tags: [docker-shell]
-  stage: cleanup
-  script:
-    - docker image rm -f gitlab.rtp.rti.org:5005/cds/datavue-starter-template
+# cleanup-server:
+#   tags: [docker-shell]
+#   stage: cleanup
+#   script:
+#     - docker image rm -f gitlab.rtp.rti.org:5005/cds/datavue-starter-template
