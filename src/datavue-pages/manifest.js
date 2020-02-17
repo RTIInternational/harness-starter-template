@@ -1,3 +1,4 @@
 import examplePage from './examplePage'
-const pages = [examplePage] // add pages to this array
+import examplePageTwo from './examplePageTwo'
+const pages = [examplePage, examplePageTwo] // add pages to this array
 export default pages

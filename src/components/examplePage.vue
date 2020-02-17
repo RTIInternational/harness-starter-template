@@ -13,7 +13,17 @@
 
 <script>
 export default {
-  name: 'examplePage'
+  name: 'examplePage',
+  mounted () {
+    this.$store.subscribeAction({
+      after: (action, state) => {
+        if (action.type.includes('LOAD_DATA')) {
+          console.log(action)
+          // this.$router.push({ query: { 'entity': this.page.pageProps.entity } })
+        }
+      }
+    })
+  }
 }
 </script>
 <style scoped>

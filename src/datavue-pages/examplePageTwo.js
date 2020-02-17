@@ -1,9 +1,9 @@
 import exampleChart from '../components/exampleChart'
 import examplePage from '../components/examplePage'
 import { components } from '../../dev-packages/datavue-ui/src/datavue-ui'
-export default class ExamplePage {
-  title = 'Example Page'
-  key = 'examplePage'
+export default class ExamplePageTwo {
+  title = 'Example Page Two'
+  key = 'examplePageTwo'
   pageComponent = examplePage // add page component here
   pageProps = {}
   retrieveData = async (state, pageObject) => {
