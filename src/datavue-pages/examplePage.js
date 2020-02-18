@@ -11,15 +11,72 @@ export default class ExamplePage {
   }
   filters = function () {
     return {
-      exampleFilter: {
-        key: 'exampleFilter',
-        label: 'Example Filter',
+      exampleSelect: {
+        key: 'exampleSelect',
+        label: 'Example Select',
         component: components['DatavueUiSelect'],
         options: [
           {
             key: 'exampleOption',
             label: 'Example Option',
             default: true
+          },
+          {
+            key: 'exampleOption2',
+            label: 'Example Option 2'
+          },
+          {
+            key: 'exampleOption3',
+            label: 'Example Option 3'
+          }
+        ]
+      },
+      exampleMultiSelect: {
+        key: 'exampleMultiSelect',
+        label: 'Example Multiselect',
+        component: components['DatavueUiSelect'],
+        props: {
+          multiple: true
+        },
+        options: [
+          {
+            key: 'exampleOption',
+            label: 'Example Option'
+          },
+          {
+            key: 'exampleOption2',
+            label: 'Example Option 2',
+            default: true
+          },
+          {
+            key: 'exampleOption3',
+            label: 'Example Option 3',
+            default: true
+          }
+        ]
+      },
+      exampleInput: {
+        key: 'exampleInput',
+        label: 'Example Input',
+        component: components['DatavueUiInput'],
+        options: [
+          {
+            key: 'value'
+          }
+        ]
+      },
+      exampleRadioGroup: {
+        key: 'exampleRadioGroup',
+        label: 'Example Radio Group',
+        component: components['DatavueUiRadioGroup'],
+        options: [
+          {
+            key: 'exampleOption',
+            label: 'Example Option'
+          },
+          {
+            key: 'exampleOption2',
+            label: 'Example Option2'
           }
         ]
       }
@@ -34,7 +91,6 @@ export default class ExamplePage {
         props: {
           chartComponent: exampleChart,
           tableAdapter: function (chart, filters, data) {
-            console.log(chart)
             let map = {
               'key': 'Transformed key',
               'key2': 'Transformed key 2'
@@ -46,7 +102,6 @@ export default class ExamplePage {
                 return acc
               }, {}))
             })
-            console.log(newData)
             return newData
           }
         }

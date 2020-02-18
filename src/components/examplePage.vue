@@ -3,7 +3,7 @@
     <div class="card">
       <h5 class="card-header">Filters</h5>
       <div class="card-body">
-        <FilterGrid />
+        <FilterGrid :columns="2" />
       </div>
     </div>
     <br />
