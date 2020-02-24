@@ -1,6 +1,6 @@
 import exampleChart from '../components/exampleChart'
 import examplePage from '../components/examplePage'
-import { components } from '../../dev-packages/datavue-ui/src/datavue-ui'
+import { components } from 'datavue-ui'
 export default class ExamplePage {
   title = 'Example Page'
   key = 'examplePage'
