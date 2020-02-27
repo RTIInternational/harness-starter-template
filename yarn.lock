@@ -776,10 +776,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@datavue/datavue-ui@^0.11.0":
-  version "0.11.0"
-  resolved "http://cds-mallard.rtp.rti.org:4873/@datavue%2fdatavue-ui/-/datavue-ui-0.11.0.tgz#b5496418cda2648d39db51b387cd96abc5af5b9d"
-  integrity sha512-fBh9KjRcZ1Iq6YBjOeN25ayODPn4GvZu+bAUVyphapTFoI3GZ/qAPIQjRQ+l4jRrlk0jFI6EiAjAxK05nz5AHw==
+"@datavue/datavue-ui@^1.0.0":
+  version "1.0.0"
+  resolved "http://cds-mallard.rtp.rti.org:4873/@datavue%2fdatavue-ui/-/datavue-ui-1.0.0.tgz#a1b43e9a0e6e90458f7fc02409749ab4d1973442"
+  integrity sha512-8TZElntlHjckWWt/a8MNibW+2Z1qzzIPcXUKdx4o8ru3Ru6rxbEIgo+muScnBBwtrZGv3JplAksH9CMXS8sJCg==
   dependencies:
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     bootstrap "^4.3.1"
@@ -790,10 +790,10 @@
     vue-router "^3.0.7"
     vuex "^3.1.1"
 
-"@datavue/datavue@^0.8.0":
-  version "0.8.0"
-  resolved "http://cds-mallard.rtp.rti.org:4873/@datavue%2fdatavue/-/datavue-0.8.0.tgz#2f13baa38bcb6c30de2699c7c11cf8b9f70b7923"
-  integrity sha512-Ep9RxUYKdnOo0q6iZgicAQ9FeQCH+Gl3BYcG8yftTJVc+xmoxPogafqV9qYqQ0bm3U9mn8SfpCHCyxtGXfBAqQ==
+"@datavue/datavue@^1.0.1":
+  version "1.0.1"
+  resolved "http://cds-mallard.rtp.rti.org:4873/@datavue%2fdatavue/-/datavue-1.0.1.tgz#55a73d8f107ae864a0877d0c59ea4ca8dbddf019"
+  integrity sha512-hPW4gpSVgnxckJzpu/o5qGT/0Lawyq+MECkYP4PLruJA11omdAfDkqukr38ykD8/V0fP8xja9hD7foYBitKJbg==
   dependencies:
     file-saver "^2.0.2"
     vue "^2.6.10"
@@ -10008,7 +10008,12 @@ vue-loader@^15.8.3:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-router@^3.0.7, vue-router@^3.1.3:
+vue-router@^3.0.7:
+  version "3.1.6"
+  resolved "https://registry.npmjs.org/vue-router/-/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
+  integrity sha512-GYhn2ynaZlysZMkFE5oCHRUTqE8BWs/a9YbKpNLi0i7xD6KG1EzDqpHQmv1F5gXjr8kL5iIVS8EOtRaVUEXTqA==
+
+vue-router@^3.1.3:
   version "3.1.5"
   resolved "https://registry.npmjs.org/vue-router/-/vue-router-3.1.5.tgz#ff29b8a1e1306c526b52d4dc0532109f16c41231"
   integrity sha512-BszkPvhl7I9h334GjckCh7sVFyjTPMMJFJ4Bsrem/Ik+B/9gt5tgrk8k4gGLO4ZpdvciVdg7O41gW4DisQWurg==
