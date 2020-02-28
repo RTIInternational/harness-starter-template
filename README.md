@@ -20,6 +20,10 @@ This would create `~/new-repo` on your computer, copy the contents of `datavue-s
 
 After running this script, you simply need to run `yarn install` to install dependencies, and you are good to go.
 
+### Debugging
+
+To debug locally, follow the instructions found in [debugger.md](debugger.md)
+
 ## CI and Deployment
 
 By default, the gitlab CI in this project will create a docker image for the app, run `yarn lint` and `yarn test:unit`, then clean up.
