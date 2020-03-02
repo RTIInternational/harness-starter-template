@@ -777,9 +777,9 @@
     minimist "^1.2.0"
 
 "@datavue/datavue-ui@^1.0.0":
-  version "1.0.0"
-  resolved "http://cds-mallard.rtp.rti.org:4873/@datavue%2fdatavue-ui/-/datavue-ui-1.0.0.tgz#a1b43e9a0e6e90458f7fc02409749ab4d1973442"
-  integrity sha512-8TZElntlHjckWWt/a8MNibW+2Z1qzzIPcXUKdx4o8ru3Ru6rxbEIgo+muScnBBwtrZGv3JplAksH9CMXS8sJCg==
+  version "1.0.1"
+  resolved "http://cds-mallard.rtp.rti.org:4873/@datavue%2fdatavue-ui/-/datavue-ui-1.0.1.tgz#60255d76402313eca620865504ab77cd7ef46e0f"
+  integrity sha512-igCgLt2V9gy5sQzyEAuUhtFx5PZLBDKjDd0utQ0aXW6z1CPiNK/fzLgNc2jmL3Sjj8/0LEdXAPZa0VzcF8EDqA==
   dependencies:
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     bootstrap "^4.3.1"
@@ -791,9 +791,9 @@
     vuex "^3.1.1"
 
 "@datavue/datavue@^1.0.1":
-  version "1.0.1"
-  resolved "http://cds-mallard.rtp.rti.org:4873/@datavue%2fdatavue/-/datavue-1.0.1.tgz#55a73d8f107ae864a0877d0c59ea4ca8dbddf019"
-  integrity sha512-hPW4gpSVgnxckJzpu/o5qGT/0Lawyq+MECkYP4PLruJA11omdAfDkqukr38ykD8/V0fP8xja9hD7foYBitKJbg==
+  version "1.0.3"
+  resolved "http://cds-mallard.rtp.rti.org:4873/@datavue%2fdatavue/-/datavue-1.0.3.tgz#6d375626f8b48344af1a2e134de7a27f59bb3eb1"
+  integrity sha512-nBAcOPiKpIhYQF+2wKZy0CeZFRPLjWzTaMRvN4uIbVdiGVGFipj4BfAGk80AFll56+Zt0aNe8HoWQuRiuKr98w==
   dependencies:
     file-saver "^2.0.2"
     vue "^2.6.10"
