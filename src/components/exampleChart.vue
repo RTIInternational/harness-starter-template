@@ -12,7 +12,7 @@
     <h5>Filters:</h5>
       <ul>
         <li v-for="(filter, idx) in filters" :key="idx">
-          <strong>{{filter.label}}</strong>: {{getLabelForSelectedOption(filter.key)}}
+          <strong>{{filter.label}}</strong>: {{getLabelForSelectedOption(filter.key) || getFilter(filter.key)}}
         </li>
       </ul>
     </div>

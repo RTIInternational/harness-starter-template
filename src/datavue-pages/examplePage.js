@@ -4,9 +4,9 @@ import { components } from '../../dev-packages/datavue-ui/src/datavue-ui'
 export default class ExamplePage {
   title = 'Example Page'
   key = 'examplePage'
-  pageComponent = examplePage // add page component here
+  pageComponent = examplePage
   pageProps = {}
-  retrieveData = async (state, pageObject) => {
+  retrieveData = async (state, pageObject, dv) => {
     return { exampleChart: [{ key: 'value', key2: 'value2' }] }
   }
   filters = function () {
