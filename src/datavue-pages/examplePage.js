@@ -7,7 +7,13 @@ export default class ExamplePage {
   pageComponent = examplePage
   pageProps = {}
   retrieveData = async (state, pageObject, dv) => {
-    return { exampleChart: [{ key: 'value', key2: 'value2' }] }
+    return { exampleChart: [
+      { key: 'value1', key2: 'value1' },
+      { key: 'value2', key2: 'value2' },
+      { key: 'Value3', key2: 'value3' },
+      { key: 'value4', key2: 'value4' }
+
+    ] }
   }
   filters = function () {
     return {

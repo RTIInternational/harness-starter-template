@@ -20,3 +20,5 @@ yarn-error.log*
 *.sln
 *.sw?
 dev-packages
+dev-packages/datavue-ui
+dev-packages/datavue
