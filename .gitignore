@@ -22,3 +22,4 @@ yarn-error.log*
 dev-packages
 dev-packages/datavue-ui
 dev-packages/datavue
+yarn.lock

@@ -6,6 +6,10 @@ import pages from './datavue-pages/manifest'
 import datavue from '../dev-packages/datavue/src/datavue'
 import { datavueUI } from '../dev-packages/datavue-ui/src/datavue-ui'
 
+// css and bootstrap js for pills
+import 'bootstrap'
+import './styles/main.scss'
+
 Vue.use(datavue, { store, router, pages })
 Vue.use(datavueUI)
 Vue.config.productionTip = false
