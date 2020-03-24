@@ -5,7 +5,9 @@ import store from './store'
 import pages from './datavue-pages/manifest'
 import datavue from '@datavue/datavue'
 import { datavueUI } from '@datavue/datavue-ui'
-import '@datavue/datavue-ui/dist/datavue-ui.css'
+
+// import 'bootstrap' // enable this line for bootstrap javascript features
+import './styles/main.scss'
 
 Vue.use(datavue, { store, router, pages })
 Vue.use(datavueUI)
