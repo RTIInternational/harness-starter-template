@@ -26,7 +26,7 @@ lint-app:
   tags: [docker-shell]
   stage: lint
   script:
-    - docker exec -t datavue-starter-template-ci yarn run lint
+    - docker exec -t ncvs-2-ci yarn run lint --no-fix --max-warnings -1
 
 test-app:
   tags: [docker-shell]

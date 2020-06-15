@@ -1,12 +1,14 @@
 <template>
   <div class="container">
     <div class="card">
-      <h5 class="card-header">Filters</h5>
+      <h5 class="card-header">
+        Filters
+      </h5>
       <div class="card-body">
         <FilterGrid :columns="2" />
       </div>
     </div>
-    <br />
+    <br>
 
     <chartGrid />
   </div>
@@ -14,7 +16,7 @@
 
 <script>
 export default {
-  name: 'examplePage'
+  name: 'ExamplePage'
 }
 </script>
 <style scoped>
