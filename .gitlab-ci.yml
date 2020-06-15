@@ -26,7 +26,7 @@ lint-app:
   tags: [docker-shell]
   stage: lint
   script:
-    - docker exec -t ncvs-2-ci yarn run lint --no-fix --max-warnings 0
+    - docker exec -t datavue-starter-template-ci yarn run lint --no-fix --max-warnings 0
 
 test-app:
   tags: [docker-shell]
@@ -65,6 +65,8 @@ cleanup-app:
     - docker kill datavue-starter-template-ci
     - docker container rm -f datavue-starter-template-ci
     - docker image rm -f datavue-starter-template-ci
+  when: always
+  
 # cleanup-server:
 #   tags: [docker-shell]
 #   stage: cleanup
