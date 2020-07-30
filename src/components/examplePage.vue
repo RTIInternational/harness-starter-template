@@ -9,7 +9,6 @@
       </div>
     </div>
     <br>
-
     <chartGrid />
   </div>
 </template>

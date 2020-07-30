@@ -9,8 +9,6 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@datavue/datavue": "~1.1.0",
-    "@datavue/datavue-ui": "~1.1.7",
     "core-js": "^3.3.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
