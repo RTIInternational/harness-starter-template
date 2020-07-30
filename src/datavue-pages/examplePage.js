@@ -85,6 +85,35 @@ export default class ExamplePage {
             label: 'Example Option2'
           }
         ]
+      },
+      exampleCheckboxGroup: {
+        key: 'exampleCheckboxGroup',
+        label: 'Example Checkbox Group',
+        component: components['DatavueUiCheckboxGroup'],
+        options: [
+          {
+            key: 'exampleOption',
+            label: 'Example Option',
+            default: true
+          },
+          {
+            key: 'exampleOption2',
+            label: 'Example Option2'
+          },
+          {
+            key: 'exampleOption3',
+            label: 'Example Option3'
+          },
+          {
+            key: 'exampleOption4',
+            label: 'Example Option4'
+          }
+        ],
+        props: {
+          multiple: true,
+          labelPosition: 'vertical',
+          collapse: true
+        }
       }
     }
   }
