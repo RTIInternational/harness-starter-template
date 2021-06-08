@@ -9,7 +9,7 @@ build-app:
   tags: [docker-shell]
   stage: build
   script:
-    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.rtp.rti.org:5005
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN cds-mallard.rtp.rti.org:5005
     - docker build ./ -t datavue-starter-template-ci --no-cache --rm
     - docker run -d -t  --name datavue-starter-template-ci datavue-starter-template-ci:latest /bin/sh
 
@@ -18,9 +18,9 @@ build-app:
 #   only: [master]
 #   stage: build
 #   script:
-#     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.rtp.rti.org:5005
-#     - docker build ./ -t gitlab.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME -f Dockerfile-server --rm
-#     - docker push gitlab.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME
+#     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN cds-mallard.rtp.rti.org:5005
+#     - docker build ./ -t cds-mallard.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME -f Dockerfile-server --rm
+#     - docker push cds-mallard.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME
 
 lint-app:
   tags: [docker-shell]
@@ -39,7 +39,7 @@ test-app:
 #   tags: [docker-shell]
 #   only: [master]
 #   script:
-#     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.rtp.rti.org:5005
+#     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN cds-mallard.rtp.rti.org:5005
 #     - docker exec -t datavue-starter-template-ci aws configure set region us-east-1
 #     - docker exec -t datavue-starter-template-ci aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
 #     - docker exec -t datavue-starter-template-ci aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
@@ -51,12 +51,12 @@ test-app:
 #   tags: [docker-shell]
 #   only: [master]
 #   script:
-#     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.rtp.rti.org:5005
+#     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN cds-mallard.rtp.rti.org:5005
 #     - docker kill YOUR_REPOSITORY_NAME || true
 #     - docker container rm YOUR_REPOSITORY_NAME || true
-#     - docker image rm -f gitlab.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME || true
-#     - docker image pull gitlab.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME
-#     - docker run -d -p PORT_TO_USE:80 --name YOUR_REPOSITORY_NAME gitlab.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME
+#     - docker image rm -f cds-mallard.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME || true
+#     - docker image pull cds-mallard.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME
+#     - docker run -d -p PORT_TO_USE:80 --name YOUR_REPOSITORY_NAME cds-mallard.rtp.rti.org:5005/cds/YOUR_REPOSITORY_NAME
 
 cleanup-app:
   tags: [docker-shell]
@@ -71,4 +71,4 @@ cleanup-app:
 #   tags: [docker-shell]
 #   stage: cleanup
 #   script:
-#     - docker image rm -f gitlab.rtp.rti.org:5005/cds/datavue-starter-template
+#     - docker image rm -f cds-mallard.rtp.rti.org:5005/cds/datavue-starter-template

@@ -13,8 +13,8 @@ bash clone.sh <desired directory name> <git remote>
 For example, if I created a new project in gitlab named `new-repo`, I could do the following:
 ```
 cd ~/ # navigate to my home directory
-git clone http://gitlab.rtp.rti.org/datavue/datavue-starter-template # clone this repo
-bash clone.sh new-repo git@gitlab.rtp.rti.org:cds/new-repo.git
+git clone http://cds-mallard.rtp.rti.org/datavue/datavue-starter-template # clone this repo
+bash clone.sh new-repo git@cds-mallard.rtp.rti.org:cds/new-repo.git
 ```
 This would create `~/new-repo` on your computer, copy the contents of `datavue-starter-template` into it, change the git remote to the specified remote, then push the project.f
 
