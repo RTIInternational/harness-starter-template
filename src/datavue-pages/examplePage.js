@@ -1,12 +1,12 @@
 import exampleChart from '../components/exampleChart'
 import examplePage from '../components/examplePage'
-import { components } from '@datavue/datavue-ui'
+import { components } from '@rtidatascience/harness-ui'
 export default class ExamplePage {
   title = 'Example Page'
   key = 'examplePage'
   pageComponent = examplePage
   pageProps = {}
-  retrieveData = async (state, pageObject, dv) => {
+  retrieveData = async (state, pageObject, hs) => {
     return { exampleChart: [{ key: 'value', key2: 'value2' }] }
   }
   filters = function () {
@@ -14,7 +14,7 @@ export default class ExamplePage {
       exampleSelect: {
         key: 'exampleSelect',
         label: 'Example Select',
-        component: components['DatavueUiSelect'],
+        component: components['HarnessUiSelect'],
         options: [
           {
             key: 'exampleOption',
@@ -34,7 +34,7 @@ export default class ExamplePage {
       exampleMultiSelect: {
         key: 'exampleMultiSelect',
         label: 'Example Multiselect',
-        component: components['DatavueUiSelect'],
+        component: components['HarnessUiSelect'],
         props: {
           multiple: true
         },
@@ -58,7 +58,7 @@ export default class ExamplePage {
       exampleInput: {
         key: 'exampleInput',
         label: 'Example Input',
-        component: components['DatavueUiInput'],
+        component: components['HarnessUiInput'],
         options: [
           {
             key: 'value'
@@ -68,7 +68,7 @@ export default class ExamplePage {
       exampleRadioGroup: {
         key: 'exampleRadioGroup',
         label: 'Example Radio Group',
-        component: components['DatavueUiRadioGroup'],
+        component: components['HarnessUiRadioGroup'],
         options: [
           {
             key: 'exampleOption',

@@ -1,6 +1,6 @@
-# datavue-starter-template
+# harness-starter-template
 
-A starter template for a vue app using datavue. This repository was created with `vue-cli` and has `datavue` and `datavue-ui` installed. This repository also includes example components and pages and gitlab CI with builds for AWS and Docker.
+A starter template for a vue app using harness. This repository was created with `vue-cli` and has `harness` and `harness-ui` installed. This repository also includes example components and pages and gitlab CI with builds for AWS and Docker.
 
 ## Instructions for setup
 
@@ -13,10 +13,10 @@ bash clone.sh <desired directory name> <git remote>
 For example, if I created a new project in gitlab named `new-repo`, I could do the following:
 ```
 cd ~/ # navigate to my home directory
-git clone git@cds-mallard.rtp.rti.org:datavue/datavue-starter-template.git # clone this repo
+git clone git@github.com:RTIInternational/harness-starter-template.git # clone this repo
 bash clone.sh new-repo git@gitlab.rtp.rti.org:cds/new-repo.git
 ```
-This would create `~/new-repo` on your computer, copy the contents of `datavue-starter-template` into it, change the git remote to the specified remote, then push the project.f
+This would create `~/new-repo` on your computer, copy the contents of `harness-starter-template` into it, change the git remote to the specified remote, then push the project.
 
 After running this script, you simply need to run `yarn install` to install dependencies, and you are good to go.
 
@@ -50,5 +50,5 @@ If you would like to have the CI worker also start up the nginx container on sif
 Note: if you would like a subdomain on sif (for example `http://yourapp.sif.rtp.rti.org)`, [read these instructions](https://stackoverflow.com/questions/23649444/redirect-subdomain-to-port-nginx-flask) on how to proxy-pass a port.
 
 
-## Development of datavue packages
+## Development of harness packages
 Use the `package-dev` branch to develop new packages. Run the `dev-setup.sh` script from project root to install.

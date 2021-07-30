@@ -19,6 +19,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
-dev-packages/datavue
-dev-packages/datavue-ui
+dev-packages/harness
+dev-packages/harness-ui
 yarn.lock
