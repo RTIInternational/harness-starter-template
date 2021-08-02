@@ -5,8 +5,8 @@ import store from './store'
 import pages from './harness-pages/manifest'
 
 // import 'bootstrap' // enable this line for bootstrap javascript features
-import harness from '@rtidatascience/harness'
-import { harnessUI } from '@rtidatascience/harness-ui'
+import harness from '../dev-packages/harness/src/harness'
+import { harnessUI } from '../dev-packages/harness-ui/src/harness-ui'
 
 // css and bootstrap js for pills
 import 'bootstrap'
