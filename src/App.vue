@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <navbar :title="'Datavue Starter Template'" />
+    <navbar :title="'Harness Starter Template'" />
     <router-view :key="$route.name" />
   </div>
 </template>

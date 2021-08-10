@@ -1,12 +1,12 @@
 import exampleChart from '../components/exampleChart'
 import examplePage from '../components/examplePage'
-import { components } from '../../dev-packages/datavue-ui/src/datavue-ui'
+import { components } from '../../dev-packages/harness-ui/src/harness-ui'
 export default class ExamplePage {
   title = 'Example Page'
   key = 'examplePage'
   pageComponent = examplePage
   pageProps = {}
-  retrieveData = async (state, pageObject, dv) => {
+  retrieveData = async (state, pageObject, hs) => {
     return { exampleChart: [
       { key: 'value1', key2: 'value1' },
       { key: 'value2', key2: 'value2' },
@@ -20,7 +20,7 @@ export default class ExamplePage {
       exampleSelect: {
         key: 'exampleSelect',
         label: 'Example Select',
-        component: components['DatavueUiSelect'],
+        component: components['HarnessUiSelect'],
         options: [
           {
             key: 'exampleOption',
@@ -40,7 +40,7 @@ export default class ExamplePage {
       exampleMultiSelect: {
         key: 'exampleMultiSelect',
         label: 'Example Multiselect',
-        component: components['DatavueUiSelect'],
+        component: components['HarnessUiSelect'],
         props: {
           multiple: true
         },
@@ -64,7 +64,7 @@ export default class ExamplePage {
       exampleInput: {
         key: 'exampleInput',
         label: 'Example Input',
-        component: components['DatavueUiInput'],
+        component: components['HarnessUiInput'],
         options: [
           {
             key: 'value'
@@ -74,7 +74,7 @@ export default class ExamplePage {
       exampleRadioGroup: {
         key: 'exampleRadioGroup',
         label: 'Example Radio Group',
-        component: components['DatavueUiRadioGroup'],
+        component: components['HarnessUiRadioGroup'],
         options: [
           {
             key: 'exampleOption',
@@ -89,7 +89,7 @@ export default class ExamplePage {
       exampleCheckboxGroup: {
         key: 'exampleCheckboxGroup',
         label: 'Example Checkbox Group',
-        component: components['DatavueUiCheckboxGroup'],
+        component: components['HarnessUiCheckboxGroup'],
         options: [
           {
             key: 'exampleOption',

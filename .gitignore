@@ -20,6 +20,6 @@ yarn-error.log*
 *.sln
 *.sw?
 dev-packages
-dev-packages/datavue-ui
-dev-packages/datavue
+dev-packages/harness
+dev-packages/harness-ui
 yarn.lock

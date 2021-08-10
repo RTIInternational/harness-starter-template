@@ -1,11 +1,11 @@
 cd dev-packages
 
-cd datavue
+cd harness
 git pull
 yarn install
 cd ../
 
-cd datavue-ui
+cd harness-ui
 git pull
 yarn install
 cd ../
