@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <navbar
-      :title="'Datavue Starter Template'"
+      :title="'Harness Starter Template'"
       :classes="'bg-primary text-light'"
     />
     <router-view :key="$route.name" />

@@ -1,12 +1,12 @@
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
-import datavue from '@datavue/datavue'
-import { datavueUI } from '@datavue/datavue-ui'
-import pages from '@/datavue-pages/manifest'
+import harness from '@rtidatascience/harness'
+import { harnessUI } from '@rtidatascience/harness-ui'
+import pages from '@/harness-pages/manifest'
 import { createLocalVue, mount } from '@vue/test-utils'
 import App from '@/App'
 
-// creating vue instance with test pages/datavue mocked
+// creating vue instance with test pages/harness mocked
 const localVue = createLocalVue()
 
 localVue.use(VueRouter)
@@ -15,8 +15,8 @@ const router = new VueRouter()
 localVue.use(Vuex)
 const store = new Vuex.Store()
 
-localVue.use(datavue, { store, router, pages })
-localVue.use(datavueUI)
+localVue.use(harness, { store, router, pages })
+localVue.use(harnessUI)
 
 // set up constant app
 let wrapper = mount(App, {
@@ -27,7 +27,7 @@ let wrapper = mount(App, {
 })
 
 // general
-describe('datavue', () => {
+describe('harness', () => {
   it('Mounts successfully', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
