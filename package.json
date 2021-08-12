@@ -9,8 +9,8 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@rtidatascience/harness": "~1.1.0",
-    "@rtidatascience/harness-ui": "~1.1.7",
+    "@rtidatascience/harness": "^1.17.1",
+    "@rtidatascience/harness-ui": "^1.8.2",
     "core-js": "^3.3.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
@@ -26,8 +26,8 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.0",
+    "sass": "~1.32",
+    "sass-loader": "^10",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
