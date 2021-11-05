@@ -27,7 +27,7 @@ export default class TisTheSeason {
       },
       thanksgivingFood:
       [
-        {}
+        []
       ]
     }
   }
