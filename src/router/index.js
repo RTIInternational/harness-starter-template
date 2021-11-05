@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [{ path: '/', redirect: '/examplePage' }]
+  routes: [{ path: '/', redirect: '/tisTheSeason' }]
 })
 
 export default router
