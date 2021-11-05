@@ -6,12 +6,17 @@ import pages from './harness-pages/manifest'
 import harness from '@rtidatascience/harness'
 import { harnessUI } from '@rtidatascience/harness-ui'
 
+// include Highcharts
+import HighchartsVue from 'highcharts-vue'
+
 // import 'bootstrap' // enable this line for bootstrap javascript features
 import './styles/main.scss'
 
 Vue.use(harness, { store, router, pages })
 Vue.use(harnessUI)
 Vue.config.productionTip = false
+
+Vue.use(HighchartsVue)
 
 new Vue({
   router,

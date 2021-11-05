@@ -13,6 +13,8 @@
     "@rtidatascience/harness-ui": "^1.8.2",
     "bootstrap-icons": "^1.5.0",
     "core-js": "^3.3.2",
+    "highcharts": "^7.2.1",
+    "highcharts-vue": "^1.3.5",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
     "vuex": "^3.0.1"
