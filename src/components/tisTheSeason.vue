@@ -10,13 +10,13 @@
     </div>
     <br>
 
-    <chartGrid />
+    <ChartGrid />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ExamplePage'
+  name: 'TisTheSeason'
 }
 </script>
 <style scoped>
