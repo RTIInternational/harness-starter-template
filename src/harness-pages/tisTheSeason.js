@@ -52,55 +52,6 @@ export default class TisTheSeason {
             label: 'Example Option 3'
           }
         ]
-      },
-      exampleMultiSelect: {
-        key: 'exampleMultiSelect',
-        label: 'Example Multiselect',
-        component: components['HarnessUiSelect'],
-        props: {
-          multiple: true
-        },
-        options: [
-          {
-            key: 'exampleOption',
-            label: 'Example Option'
-          },
-          {
-            key: 'exampleOption2',
-            label: 'Example Option 2',
-            default: true
-          },
-          {
-            key: 'exampleOption3',
-            label: 'Example Option 3',
-            default: true
-          }
-        ]
-      },
-      exampleInput: {
-        key: 'exampleInput',
-        label: 'Example Input',
-        component: components['HarnessUiInput'],
-        options: [
-          {
-            key: 'value'
-          }
-        ]
-      },
-      exampleRadioGroup: {
-        key: 'exampleRadioGroup',
-        label: 'Example Radio Group',
-        component: components['HarnessUiRadioGroup'],
-        options: [
-          {
-            key: 'exampleOption',
-            label: 'Example Option'
-          },
-          {
-            key: 'exampleOption2',
-            label: 'Example Option2'
-          }
-        ]
       }
     }
   }
