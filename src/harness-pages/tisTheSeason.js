@@ -7,29 +7,30 @@ export default class TisTheSeason {
   pageComponent = tisTheSeason
   pageProps = {}
   retrieveData = async (state, pageObject, hs) => {
-    return {
-      halloweenMovies:
+    let data = hs.getRequestCache()
+    if (!data) {
+      data = [
+        ['What We Do in the Shadows', 96],
+        ['Halloween', 96],
+        ['The Nightmare Before Christmas', 95],
+        ['It\'s the Great Pumpkin, Charlie Brown', 95],
+        ['The Witches', 93],
+        ['It (2017)', 86],
+        ['The Blair Witch Project', 86],
+        ['The Exorcist', 83],
+        ['Halloweentown', 80],
+        ['Scream', 79]
+      ]
+      hs.setRequestCache(data)
+    }
+    let charts = {}
+    let halloweenMovies =
       {
         title: 'Halloween Movies',
-        data:
-        [
-          ['What We Do in the Shadows', 96],
-          ['Halloween', 96],
-          ['The Nightmare Before Christmas', 95],
-          ['It\'s the Great Pumpkin, Charlie Brown', 95],
-          ['The Witches', 93],
-          ['It (2017)', 86],
-          ['The Blair Witch Project', 86],
-          ['The Exorcist', 83],
-          ['Halloweentown', 80],
-          ['Scream', 79]
-        ]
-      },
-      thanksgivingFood:
-      [
-        []
-      ]
-    }
+        data: data
+      }
+    charts.halloweenMovies = halloweenMovies
+    return charts
   }
   filters = function () {
     return {
