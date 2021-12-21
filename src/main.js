@@ -10,7 +10,7 @@ import { harnessUI } from '../dev-packages/harness-ui/src/harness-ui'
 
 // css and bootstrap js for pills
 import 'bootstrap'
-import './styles/main.scss'
+import '@/styles/main.scss'
 
 Vue.use(harness, { store, router, pages })
 Vue.use(harnessUI)
