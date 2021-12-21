@@ -5,7 +5,9 @@
         Filters
       </h5>
       <div class="card-body">
-        <FilterGrid :columns="2" />
+        <FilterAccordian
+          :valid-filters="Object.keys(this.filters)"
+        />
       </div>
     </div>
     <br>
