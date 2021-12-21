@@ -35,14 +35,18 @@ export default class ExamplePage {
             key: 'exampleOption3',
             label: 'Example Option 3'
           }
-        ]
+        ],
+        props: {
+          filterType: 'Select_Type'
+        }
       },
       exampleMultiSelect: {
         key: 'exampleMultiSelect',
         label: 'Example Multiselect',
         component: components['HarnessUiSelect'],
         props: {
-          multiple: true
+          multiple: true,
+          filterType: 'Select_Type'
         },
         options: [
           {
@@ -69,7 +73,10 @@ export default class ExamplePage {
           {
             key: 'value'
           }
-        ]
+        ],
+        props: {
+          filterType: 'Input_Type'
+        }
       },
       exampleRadioGroup: {
         key: 'exampleRadioGroup',
@@ -84,7 +91,10 @@ export default class ExamplePage {
             key: 'exampleOption2',
             label: 'Example Option2'
           }
-        ]
+        ],
+        props: {
+          filterType: 'Radio_Type'
+        }
       },
       exampleCheckboxGroup: {
         key: 'exampleCheckboxGroup',
@@ -112,7 +122,8 @@ export default class ExamplePage {
         props: {
           multiple: true,
           labelPosition: 'vertical',
-          collapse: true
+          collapse: true,
+          filterType: 'Checkbox_Type'
         }
       }
     }
