@@ -52,3 +52,9 @@ Note: if you would like a subdomain on sif (for example `http://yourapp.sif.rtp.
 
 ## Development of harness packages
 Use the `package-dev` branch to develop new packages. Run the `dev-setup.sh` script from project root to install.
+
+Note: For testing components that rely on jQuery, add a bootstrap import to the top of `dev-packages/harness-ui/src/components/harness-ui.js`:
+```
+import components from './manifest'
+import 'bootstrap'
+```
