@@ -6,6 +6,8 @@ Simply run `yarn install` to install dependencies and `yarn serve` to run a deve
 
 ## Instructions for setup as a new repository
 
+NOTE: Github has recently added a new "Use This Template" feature! Look for that button to use this repository as a template and ignore this section if that works for you.
+
 Once downloaded, run `git remote set-url origin <your-respository-url>` to point the downloaded repository at your repository.
 
 Additionally, included is a clone script that will create a new folder adjacent to this one, set it to a git remote of your choosing, run `yarn install`, then push. If you plan on using this template frequently, this script will allow you to keep the template downloaded and create fresh clones as needed without having to redownload and move the repository every time. The syntax for using this script is as follows:
