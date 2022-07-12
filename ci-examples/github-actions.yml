@@ -1,0 +1,36 @@
+name: CI
+on: [push]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        if: github.event_name == 'push'
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        if: github.event_name == 'push'
+        run: |
+          docker build ./ -f ./Dockerfile-CI -t harness-starter-template-ci --no-cache --rm
+          docker run -d -t --name harness-starter-template-ci harness-starter-template-ci:latest /bin/sh
+
+      - name: Lint app
+        if: github.event_name == 'push'
+        run: |
+          docker exec -t harness-starter-template-ci yarn run lint --no-fix --max-warnings 0
+          
+      - name: Test app
+        if: github.event_name == 'push'
+        run: |
+          docker exec -t harness-starter-template-ci yarn run test:unit
+          
+      - name: Deploy main to S3
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          docker exec -t harness-starter-template-ci aws configure set region ${{ secrets.AWS_REGION }}
+          docker exec -t harness-starter-template-ci aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          docker exec -t harness-starter-template-ci aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          docker exec -t harness-starter-template-ci aws s3 rm s3://${{ secrets.AWS_S3_BUCKET }} --recursive
+          docker exec -t harness-starter-template-ci aws s3 sync /app/dist s3://${{ secrets.AWS_S3_BUCKET }}
+          docker exec -t harness-starter-template-ci aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

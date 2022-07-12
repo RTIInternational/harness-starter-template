@@ -1,0 +1,54 @@
+stages:
+  - build
+  - lint
+  - test
+  - deploy
+
+# YAML anchor script
+.clean: &clean
+  - docker kill harness-starter-template-ci || true
+  - docker container rm -f harness-starter-template-ci || true
+  - docker image rm -f harness-starter-template-ci || true
+
+# Ensure docker is cleaned up before and after pipeline
+pre-clean:
+  tags: [docker-shell]
+  stage: .pre
+  script: *clean
+post-clean:
+  tags: [docker-shell]
+  stage: .post
+  script: *clean
+
+build-app:
+  tags: [docker-shell]
+  stage: build
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN <gitlab-ci-address>
+    - docker build --build-arg BUILD_DATE="$(date +%m/%d/%Y)" -t harness-starter-template-ci -f ./Dockerfile-CI --no-cache --rm ./
+    - docker run -d -t  --name harness-starter-template-ci harness-starter-template-ci:latest /bin/sh
+
+lint-app:
+  tags: [docker-shell]
+  stage: lint
+  script:
+    - docker exec -t harness-starter-template-ci yarn run lint --no-fix --max-warnings 0
+
+test-app:
+  tags: [docker-shell]
+  stage: test
+  script:
+    - docker exec -t harness-starter-template-ci yarn run test:unit
+
+deploy-app-S3:
+  stage: deploy
+  tags: [docker-shell]
+  only: [main]
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN <gitlab-ci-address>
+    - docker exec -t harness-starter-template-ci aws configure set region $AWS_REGION
+    - docker exec -t harness-starter-template-ci aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+    - docker exec -t harness-starter-template-ci aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+    - docker exec -t harness-starter-template-ci aws s3 rm s3://$AWS_S3_BUCKET --recursive
+    - docker exec -t harness-starter-template-ci aws s3 sync /app/dist s3://$AWS_S3_BUCKET
+    - docker exec -t harness-starter-template-ci aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"

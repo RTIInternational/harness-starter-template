@@ -1,6 +1,11 @@
-# this is the node:10 image with python, pip, aws-cli and vue-cli installed
 FROM alexharding/node_python
-COPY ./ /daqs
-WORKDIR /daqs
+RUN npm install -g @vue/cli
+COPY ./ /app
+WORKDIR /app
 RUN yarn install
 RUN yarn run build
+
+FROM nginx
+RUN mkdir /app
+COPY --from=0 /app/dist /app
+COPY nginx.conf /etc/nginx/nginx.conf

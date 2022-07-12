@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM alexharding/node_python
 RUN npm install -g @vue/cli
 COPY ./ /app
 WORKDIR /app
